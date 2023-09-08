@@ -74,7 +74,7 @@ const FormExpenses = () => {
             Purchase Date <span className="text-green-500/20">(optional)</span>
           </label>
           <DatePicker
-            placeholderText="start date"
+            placeholderText="expenses date"
             selected={date ? new Date(date) : null}
             onChange={(date) => handleStartDateChange(date)}
           />

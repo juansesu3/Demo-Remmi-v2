@@ -4,7 +4,6 @@ import { useState } from "react";
 
 import { useRouter } from "next/router";
 
-
 const Layout = ({ children }) => {
   const [showNav, setShowNav] = useState(false);
   const { data: session } = useSession();
@@ -33,9 +32,7 @@ const Layout = ({ children }) => {
     }
   };
 
- 
   if (!session) {
-  
     return (
       <div className="bg-[#1d1d1f] w-screen h-screen flex items-center">
         <div className="text-center w-full ">
@@ -60,8 +57,19 @@ const Layout = ({ children }) => {
               className="text-highlight font-bold text-4xl
           mb-4 "
             >
-              RemiUpp
+              RemiUpp <br /> Demo
             </h1>
+            <div className="flex flex-col text-start">
+              <p className="text-center font-medium text-gray-400">
+                if you want to try it!
+              </p>
+              <span className="text-gray-500 font-medium text-lg">
+                user: <span className="text-primary">jhondoe@test.com</span>
+              </span>
+              <span className="text-gray-500 font-medium text-lg">
+                password: <span className="text-primary">123456</span>
+              </span>
+            </div>
           </div>
           <div className="flex flex-col gap-2 w-52 m-auto">
             <div className="flex flex-col  w-52 m-auto">
@@ -93,7 +101,6 @@ const Layout = ({ children }) => {
                   </p>
                 )}
               </form>
-              
             </div>
           </div>
         </div>
@@ -124,7 +131,6 @@ const Layout = ({ children }) => {
       <div className="flex">
         <Nav show={showNav} />
         <div className="flex-grow py-4 px-2">{children}</div>
-
       </div>
     </div>
   );

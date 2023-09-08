@@ -74,7 +74,7 @@ const ViewExpensesPage = () => {
         <div className="flex flex-col gap-2">
           <h2 className="text-primary font-medium">Check image</h2>
           {isLoading && <Spinner />}
-          {
+          {expInfo && (
             <a
               href={expInfo?.imgCheck[0] ? expInfo?.imgCheck[0] : "/"}
               target="_blank"
@@ -87,7 +87,7 @@ const ViewExpensesPage = () => {
                 className="rounded-md shadow-md w-44 m-auto"
               />
             </a>
-          }
+          )}
         </div>
         <button onClick={handleClick} className="btn-primary">
           Back to expenses
